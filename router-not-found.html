@@ -1,0 +1,27 @@
+<head>
+  <title>router-not-found</title>
+</head>
+
+<template name="body">
+  <div class="template-{{currentTemplate}}">
+    {{> yield}}
+  </div>
+</template>
+
+<template name="item_list">
+  <ul>
+  {{#each items}}
+    <li><a href="/item/{{_id}}">{{name}}</a></li>
+  {{/each}}
+  </ul>
+</template>
+
+<template name="item_page">
+  <div id="item-page">
+    <h1>Item - {{name}}</h1>
+  </div>
+</template>
+
+<template name="not_found">
+  No Item Found.
+</template>
